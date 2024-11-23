@@ -13,7 +13,15 @@ class Laptop:
         return (self.costo *  descuento)/100
 
 
-laptop_pepito = Laptop("Lenovo", "i7", 32)
-print(laptop_pepito.__dict__)
-print(laptop_pepito.valor_final())
-print(f"El valos del descuento: {laptop_pepito.valor_descuento(10)}")
+    @staticmethod
+    def comparar_Costo(Laptop1, Laptop2):
+        if Laptop1.costo == Laptop2.costo:
+            return "Los costos son iguales"
+        return "Los costos son diferentes"
+    
+    @classmethod
+    def asus_laptop(clc, costo):
+        marca = "asus"
+        procesador = "i5"
+        memoria = 16
+        return clc(marca, procesador, memoria, costo)
