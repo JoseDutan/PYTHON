@@ -46,6 +46,10 @@ class auto:
     @classmethod
     def auto_generico(cls):
         return cls("Genérico", "Modelo X", 2024, 10000)
+    
+    @staticmethod
+    def es_kilometraje_valido(kilometraje):
+        return kilometraje >= 0
 
 
 # mi_auto = auto("Toyota", "Corolla", 2020)
