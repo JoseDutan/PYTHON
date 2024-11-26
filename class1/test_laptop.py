@@ -5,11 +5,17 @@ from laptop_business import Laptop_Business
 laptop_pepito = Laptop("Lenovo", "i7", 32)
 laptop_maria = Laptop("Lenovo", "i7", 32, 600)
 
-# laptop_juanito = Laptop_Gaming("MSI", "i7", 4, "RTX 8GB")
+def imprimir_informe(laptop):
+    informe = laptop.realizar_informe_uso()
+    for clave, valor in informe.items():
+        print(f"{clave} : {valor}")
+    print("\n")
+
+laptop_juanito = Laptop_Gaming("MSI", "i7", 4, "RTX 8GB")
 # print(laptop_juanito.realizar_diagnostico_sistema())
 
-laptop_nachito = Laptop_Business("MSI", "i7", 4, 256, 8)
-print(laptop_nachito.realizar_diagnostico_sistema())
+# laptop_nachito = Laptop_Business("MSI", "i7", 4, 256, 8)
+# print(laptop_nachito.realizar_diagnostico_sistema())
 
 
 
@@ -17,3 +23,8 @@ print(laptop_nachito.realizar_diagnostico_sistema())
 #     asus_laptop = Laptop.asus_laptop(numero)
 #     print(asus_laptop.__dict__)
 #print(Laptop.comparar_Costo(laptop_pepito, laptop_maria))
+
+print("PEPITO: ")
+imprimir_informe(laptop_pepito)
+print("JUANITO: ")
+imprimir_informe(laptop_juanito)
